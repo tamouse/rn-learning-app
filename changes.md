@@ -21,3 +21,6 @@ Woops, really didn't want the preset above.
     yard add apollo-client apollo-link-http apollo-cache-inmemory
 
 No, on second thought, lets start over.
+
+Adding Apollo client to the application:
+
