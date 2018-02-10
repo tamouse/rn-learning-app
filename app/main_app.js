@@ -1,16 +1,16 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { Text, View } from 'react-native'
+import { Button, Text, View } from 'react-native'
 import styles from './styles'
-import { StackNavigator } from 'react-navigation'
 
-class MainApp extends React.Component {
+export default class MainApp extends React.Component {
   static propTypes = {
-    appName: PropTypes.string
+    navigation: PropTypes.object.isRequired // from RootNavigator
   }
 
+  gotoAltScreen = () => this.props.navigation.navigate('Alt')
+
   render() {
-    console.log(this.props)
     return (
       <View style={styles.screen}>
         <Text style={styles.defaultText}>
@@ -19,13 +19,10 @@ class MainApp extends React.Component {
         <Text>
           It is called {this.props.appName}!
         </Text>
+        <Button
+          title={`Go to Alternate Screen`}
+          onPress={this.gotoAltScreen} />
       </View>
     )
   }
 }
-
-export default StackNavigator({
-  MainApp: {
-    screen: MainApp
-  }
-})
