@@ -9,6 +9,10 @@ export const styles = StyleSheet.create({
   },
   defaultText: {
     color: `#000`
+  },
+  h1: {
+    color: `#000`,
+    fontSize: 30,
   }
 })
 
