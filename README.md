@@ -44,3 +44,12 @@ Bouncing back and forth between tabs maintains each tab's stack, so if you're on
 
 Question: can I reset the stack when the user selects a different tab? (I.e., destroy the stack.)
 
+## 0005/reset-tab-stack
+
+Trying to figure out how to reset the stack for a tab when the tab is selected.
+There's probably something obbious I'm not getting here, but I cannot figure this out.
+Seems like to would be a pretty standard wish, too.
+
+I left a question on stackoverflow: <https://stackoverflow.com/questions/48725894/how-can-i-reset-a-child-stacknavigator-to-the-initial-screen-from-a-parent-tabna>
+
+
