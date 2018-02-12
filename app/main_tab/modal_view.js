@@ -4,6 +4,7 @@ import { Text, View, Button, Modal, StyleSheet } from 'react-native';
 export default class ModalView extends Component {
   state = {
     modalVisible: false,
+    transparent: true
   };
 
   openModal() {
@@ -21,11 +22,12 @@ export default class ModalView extends Component {
           visible={this.state.modalVisible}
           animationType={'slide'}
           onRequestClose={() => this.closeModal()}
-          transparent={true}
+          transparent={this.state.transparent}
         >
           <View style={styles.modalContainer}>
             <View style={styles.innerContainer}>
               <Text>This is content inside of modal component</Text>
+              <Text>The state is {this.state.transparent ? 'true' : 'false'}</Text>
               <Button
                 onPress={() => this.closeModal()}
                 title="Close modal"
