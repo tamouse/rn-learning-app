@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Text, View, Button, Modal, StyleSheet } from 'react-native';
 
+/*
+ * I'm trying to learn how `react-native-modalbox` doesn't take up the whole screen.
+ * I think I've figured out that they are *not* using the RN `Modal` and are instead
+ * animating a `View` into place.
+ */
+
 export default class ModalView extends Component {
   state = {
     modalVisible: false,
@@ -41,6 +47,7 @@ export default class ModalView extends Component {
           title="Open modal"
         />
       </View>
+
     );
   }
 }
@@ -49,16 +56,23 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
+    zIndex: 2,
+    height: "80%",
+    width: "100%",
   },
   modalContainer: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'transparent',
+    backgroundColor: 'grey',
+    zIndex: 3,
+    height: "80%",
+    width: "100%",
   },
   innerContainer: {
     alignItems: 'center',
     backgroundColor: 'white',
     height: '80%',
-    width: '100%'
+    width: '100%',
+    zIndex: 4,
   },
 });
