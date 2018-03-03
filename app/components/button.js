@@ -1,59 +1,58 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import {capitalize as C} from 'lodash'
-import {
-  Text,
-  TouchableOpacity,
-  StyleSheet
-} from 'react-native'
+import PropTypes from "prop-types";
+import React from "react";
+import { capitalize as C } from "lodash";
+import { Text, TouchableOpacity, StyleSheet } from "react-native";
 
 export default class Button extends React.Component {
   static propTypes = {
     ...TouchableOpacity.propTypes,
     accessibilityLabel: PropTypes.string,
     disabled: PropTypes.bool,
-    buttonType: PropTypes.string,
-  }
+    buttonType: PropTypes.string
+  };
 
   render() {
     let buttonProps = {
       accessible: true,
       accessibilityLabel: this.props.accessibilityLabel,
-      accessibilityTraits: 'button',
-      accessibilityComponentType: 'button',
+      accessibilityTraits: "button",
+      accessibilityComponentType: "button",
       disabled: this.props.disabled
     };
 
     if (!this.props.disabled) {
       [
-        'onPress', 'onPressIn', 'onPressOut', 'onLongPress', 'delayPressIn', 'delayPressOut', 'delayLongPress'
+        "onPress",
+        "onPressIn",
+        "onPressOut",
+        "onLongPress",
+        "delayPressIn",
+        "delayPressOut",
+        "delayLongPress"
       ].map(prop => {
-        buttonProps[prop] = this.props[prop]
+        buttonProps[prop] = this.props[prop];
       });
     }
 
     let buttonStyle = [
       styles.button,
-      this.props.disabled ? styles.buttonDisabled : styles[`button${C(this.props.buttonType)}`]
-    ]
+      this.props.disabled
+        ? styles.buttonDisabled
+        : styles[`button${C(this.props.buttonType)}`]
+    ];
 
     let textStyle = [
       styles.text,
       this.props.disabled ? styles.textDisabled : null
-    ]
+    ];
 
     return (
-      <TouchableOpacity
-        {...buttonProps}
-        style={buttonStyle}
-      >
+      <TouchableOpacity {...buttonProps} style={buttonStyle}>
         <Text style={textStyle}>
-          {this.props.children.length > 0 ?
-            this.props.children :
-            `Click Me`}
+          {this.props.children.length > 0 ? this.props.children : `Click Me`}
         </Text>
       </TouchableOpacity>
-    )
+    );
   }
 }
 
@@ -86,4 +85,4 @@ const styles = StyleSheet.create({
   buttonDisabled: {
     backgroundColor: `#6c757d`
   }
-})
+});

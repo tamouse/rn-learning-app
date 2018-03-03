@@ -55,3 +55,9 @@ I left a question on stackoverflow: <https://stackoverflow.com/questions/4872589
 ## 0006/stack-headers
 
 Put a header on each stack.
+
+## 0007/eslint-and-prettier
+
+Look, we should do this right from the start, right?
+
+And React-Navigator has issues with jest. See https://github.com/react-navigation/react-navigation/issues/256#issuecomment-278626369 and update in `package.json`.
