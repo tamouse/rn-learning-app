@@ -63,3 +63,42 @@ Ok, this didn't quite work out. I'll come back to it.
 Look, we should do this right from the start, right?
 
 And React-Navigator has issues with jest. See https://github.com/react-navigation/react-navigation/issues/256#issuecomment-278626369 and update in `package.json`.
+
+## 0008/apollo-link-state
+
+Instead of using Redux in my app, I want to use the new `apollo-link-state` feature that uses the apollo cache to hold local state.
+
+- https://dev-blog.apollodata.com/the-future-of-state-management-dd410864cae2
+- https://www.apollographql.com/docs/link/links/state.html
+
+### ideas
+
+- add a local state for when the application is logged in
+- have a boolean `isLoggedin`
+- keep an object that holds user info if need be
+- figure out how to keep an auth token provided by the application (will probably still need to use some secure storage mechanism)
+  - maybe can use react native cookies, somehow, to keep a session??
+- shape of the app. `app/index.js`:
+  - will choose whether to show the login screen or the main application `RootNavigator` depending on the state of `isLoggedIn`
+  - wrap the local state query for logged in and user info around the App component
+  - export the apollo wrappers 
+- shape of the apollo client
+  - create a new directory for apollo client
+  - define the local store, resolvers, defaults, etc
+  - define the various mutaions, queries, etc
+  - provide easy handles to things like `isLoggedIn` and `userInfo` for the rest of the app
+  
+  
+I'm not sure if this is going to work:
+
+1. the HttpLink will need to have the authorization token available before the client is created
+2. the local store can only be queried with the client
+
+I'm not clear how to resolve 1 before i resolve 2.
+
+This requires more thinking, obviously.
+
+(Abandoned for now, going to use regular old redux for the login / user info stuff.)
+ 
+  
+  
