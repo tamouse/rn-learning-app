@@ -24,3 +24,8 @@ android/build/
 !android/build/.keep
 ios/build/
 !ios/build/.keep
+
+
+.env
+.env.staging
+.env.production
