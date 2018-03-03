@@ -2,15 +2,18 @@ import { StackNavigator } from "react-navigation"
 import MainHomeScreen from "./home_screen"
 import MainAltScreen from "./alt_screen"
 import ModalView from "./modal_view"
-import React from "react"
+import Generic from "../../components/generic_component"
 
 export default (MainStack = StackNavigator(
   {
     MainHome: { screen: MainHomeScreen },
     MainAlt: { screen: MainAltScreen },
-    ModalView: { screen: ModalView }
+    ModalView: { screen: ModalView },
+    Generic: { screen: Generic }
   },
   {
-    navigationOptions: {}
+    navigationOptions: {
+      title: "Main"
+    }
   }
 ))

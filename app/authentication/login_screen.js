@@ -105,7 +105,7 @@ export default class LoginScreen extends React.Component {
             Log In
           </Button>
           {this.renderIfErrors()}
-          <Modal visible={this.props.loading}>
+          <Modal visible={this.props.loading} onRequestClose={()=>{}}>
             <View style={styles.container}>
               <Text style={styles.loading}>I'm Loading, yo</Text>
             </View>

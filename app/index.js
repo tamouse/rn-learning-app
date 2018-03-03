@@ -4,8 +4,13 @@ import { MainApp } from "./main"
 
 export class App extends React.Component {
   state = {
-    isLoggedIn: false,
-    userInfo: {}
+    isLoggedIn: true,
+    userInfo: {
+      name: "Nobody",
+      account: {
+        company_name: "None"
+      }
+    }
   }
 
   loggedIn = userInfo => {
