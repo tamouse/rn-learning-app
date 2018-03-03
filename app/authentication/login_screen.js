@@ -1,27 +1,33 @@
 import React from "react"
-import T from 'prop-types'
-import { View, Text, TextInput, TouchableOpacity, Modal, StyleSheet } from "react-native"
+import T from "prop-types"
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  Modal,
+  StyleSheet
+} from "react-native"
 import Button from "../components/button"
 
 export default class LoginScreen extends React.Component {
-
   static propTypes = {
     loading: T.bool,
     submitLogin: T.func,
-    errorMsg: T.string,
+    errorMsg: T.string
   }
 
   static defaultProps = {
     loading: false,
     submitLogin: () => {},
-    errorMsg: ''
+    errorMsg: ""
   }
 
   clearState = {
     account_slug: "",
     username: "",
     password: "",
-    disableSubmit: true,
+    disableSubmit: true
   }
 
   state = Object.assign({}, this.clearState)
@@ -34,7 +40,6 @@ export default class LoginScreen extends React.Component {
 
   handleSubdomainChange = account_slug => {
     this.setState({ account_slug }, this.checkSubmitReady)
-
   }
 
   handleUsernameChange = username => {
@@ -69,8 +74,6 @@ export default class LoginScreen extends React.Component {
       )
     }
   }
-
-
 
   render() {
     let inputBoxProps = {
@@ -134,14 +137,14 @@ const styles = StyleSheet.create({
     flexDirection: `column`,
     justifyContent: `center`,
     alignItems: `center`,
-    backgroundColor: 'white',
-    width: '100%'
+    backgroundColor: "white",
+    width: "100%"
   },
   loading: {
-    backgroundColor: 'rebeccapurple',
-    color: 'white',
+    backgroundColor: "rebeccapurple",
+    color: "white",
     padding: 20,
-    fontWeight: '900',
+    fontWeight: "900",
     fontSize: 20
   },
   mainScreen: {
@@ -155,10 +158,9 @@ const styles = StyleSheet.create({
   },
   errorText: {
     backgroundColor: "#ffe4e1",
-    borderColor: 'red',
+    borderColor: "red",
     borderWidth: 1,
     padding: 20,
-    color: 'red',
-
+    color: "red"
   }
 })

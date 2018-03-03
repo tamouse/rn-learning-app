@@ -11,6 +11,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "jest": "^22.2.1",
+    "jest-fetch-mock": "^1.4.2",
     "jest-react-native": "^18.0.0",
     "prettier": "^1.10.2",
     "react-dom": "^16.2.0",
@@ -53,6 +54,7 @@
     "react": "16.2.0",
     "react-apollo": "^2.0.4",
     "react-native": "0.52.0",
+    "react-native-config": "^0.11.5",
     "react-native-sensitive-info": "^5.1.0",
     "react-navigation": "^1.0.3"
   }

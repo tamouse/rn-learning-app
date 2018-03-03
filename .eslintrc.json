@@ -2,6 +2,9 @@
   "parser": "babel-eslint",
   "extends": ["plugin:prettier/recommended"],
   "rules": {
-    "semi":"never"
+    "semi": [
+      "error",
+      "never"
+    ]
   }
 }

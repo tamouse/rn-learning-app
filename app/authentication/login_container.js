@@ -1,17 +1,16 @@
-import React from 'react'
+import React from "react"
 import LoginScreen from "./login_screen"
 
 export class LoginContainer extends React.Component {
-
   state = {
     loading: false,
     loggedIn: false,
-    errorMsg: ''
+    errorMsg: ""
   }
 
   closeModal = () => {
     setTimeout(() => {
-      this.setState({ loading: false, errorMsg: 'not logged in' })
+      this.setState({ loading: false, errorMsg: "not logged in" })
     }, 5000)
   }
 
@@ -21,7 +20,11 @@ export class LoginContainer extends React.Component {
 
   render() {
     return (
-      <LoginScreen loading={this.state.loading} submitLogin={this.submitLogin} errorMsg={this.state.errorMsg}/>
+      <LoginScreen
+        loading={this.state.loading}
+        submitLogin={this.submitLogin}
+        errorMsg={this.state.errorMsg}
+      />
     )
   }
 }

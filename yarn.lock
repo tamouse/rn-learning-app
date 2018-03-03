@@ -2896,7 +2896,7 @@ isobject@^2.0.0:
   dependencies:
     isarray "1.0.0"
 
-isomorphic-fetch@^2.1.1:
+isomorphic-fetch@^2.1.1, isomorphic-fetch@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
   dependencies:
@@ -3074,6 +3074,12 @@ jest-environment-node@^22.4.1:
   dependencies:
     jest-mock "^22.2.0"
     jest-util "^22.4.1"
+
+jest-fetch-mock@^1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/jest-fetch-mock/-/jest-fetch-mock-1.4.2.tgz#9c003b4e4286b99b4d2b0b3a82103391d6bafc17"
+  dependencies:
+    isomorphic-fetch "^2.2.1"
 
 jest-get-type@^22.1.0:
   version "22.1.0"
@@ -4392,6 +4398,10 @@ react-dom@^16.2.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
+
+react-native-config@^0.11.5:
+  version "0.11.5"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.11.5.tgz#516cb7b6ec437c7739236ca075971db3aabdcb95"
 
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
