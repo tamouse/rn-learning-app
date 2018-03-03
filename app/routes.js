@@ -28,6 +28,9 @@ export default RootNavigator = TabNavigator(
     tabBarOptions: {
       activeTintColor: 'tomato',
       inactiveTintColor: 'gray',
+      style: {
+        zIndex: 999,
+      }
     },
     tabBarComponent: TabBarBottom,
     tabBarPosition: 'bottom',

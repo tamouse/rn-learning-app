@@ -52,4 +52,6 @@ Seems like to would be a pretty standard wish, too.
 
 I left a question on stackoverflow: <https://stackoverflow.com/questions/48725894/how-can-i-reset-a-child-stacknavigator-to-the-initial-screen-from-a-parent-tabna>
 
+## 0006/stack-headers
 
+Put a header on each stack.
