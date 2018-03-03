@@ -3,7 +3,7 @@ import RootNavigator from "./routes"
 
 export class MainApp extends React.Component {
   render() {
-    return <RootNavigator />
+    return <RootNavigator screenProps={this.props} />
   }
 }
 

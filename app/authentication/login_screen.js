@@ -1,12 +1,6 @@
 import React from "react"
 import T from "prop-types"
-import {
-  View,
-  Text,
-  TextInput,
-  Modal,
-  StyleSheet
-} from "react-native"
+import { View, Text, TextInput, Modal, StyleSheet } from "react-native"
 import Button from "../components/button"
 
 export default class LoginScreen extends React.Component {

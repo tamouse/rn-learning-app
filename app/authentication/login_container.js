@@ -5,11 +5,11 @@ import { login } from "./login_service"
 
 export class LoginContainer extends React.Component {
   static propTypes = {
-    loggedOn: T.func,
+    loggedOn: T.func
   }
 
   static defaultProps = {
-    loggedOn: ()=>{},
+    loggedOn: () => {}
   }
 
   state = {

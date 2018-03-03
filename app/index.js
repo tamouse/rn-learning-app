@@ -3,7 +3,6 @@ import { Login } from "./authentication"
 import { MainApp } from "./main"
 
 export class App extends React.Component {
-
   state = {
     isLoggedIn: false,
     userInfo: {}
@@ -25,11 +24,16 @@ export class App extends React.Component {
     })
   }
 
-
   render() {
     const props = this.props
     if (this.state.isLoggedIn) {
-      return <MainApp {...props} userInfo={this.state.userInfo} loggedOut={this.loggedOut} />
+      return (
+        <MainApp
+          {...props}
+          userInfo={this.state.userInfo}
+          loggedOut={this.loggedOut}
+        />
+      )
     } else {
       return <Login {...props} loggedOn={this.loggedIn} />
     }
