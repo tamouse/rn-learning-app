@@ -1,6 +1,6 @@
 import React from "react"
 import { Button, Text, View } from "react-native"
-import styles from "../styles"
+import styles from "../../styles"
 
 export default class AltHomeScreen extends React.Component {
   gotoAltAlt = () => this.props.navigation.navigate("AltAlt")

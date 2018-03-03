@@ -1,8 +1,17 @@
-import React from "react"
-import RootNavigator from "./routes"
+import React from 'react'
+import { isLoggedIn, userInfo, Login } from "./authentication"
+import { MainApp } from './main'
 
-export default class App extends React.Component {
+export class App extends React.Component {
+
   render() {
-    return <RootNavigator />
+    const props = this.props
+    if (isLoggedIn()) {
+      return (<MainApp {...props} userInfo={userInfo()} />)
+    } else {
+      return (<Login {...props}/>)
+    }
   }
 }
+
+export default App

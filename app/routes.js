@@ -5,8 +5,8 @@
 import React from "react"
 import { Text } from "react-native"
 import { TabNavigator, TabBarBottom } from "react-navigation"
-import Main from "./main_tab"
-import Alt from "./alternate_tab"
+import Main from "./components/main_tab"
+import Alt from "./components/alternate_tab"
 
 // The RootNavigator will form the basis for Tab navigation
 export default (RootNavigator = TabNavigator(

@@ -101,4 +101,15 @@ This requires more thinking, obviously.
 (Abandoned for now, going to use regular old redux for the login / user info stuff.)
  
   
-  
+## 0009/redux-login-state
+
+Build a redux store to use to keep the login state of the client.
+
+### Shape of the app
+
+The main `app/index.js` will wrap the application in the provider, and switch between authentication and the application based on wether the user is logged in.
+
+Authentication stores, reducers, actions, conainers, screens, and other logic is kept under `app/authentication/`. The `app/authentication/index.js` file will export `isLoggedIn` and `userInfo` for convenience functions for the rest of the application, as necessary.
+
+Application is spread out among the rest of the directories, `app/components`, mainly. The entry point for the application, with whatever clients, providers, etc, it needs, will be defined in `app/main.js`
+
