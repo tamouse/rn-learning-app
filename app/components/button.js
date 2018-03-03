@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { capitalize as C } from "lodash";
-import { Text, TouchableOpacity, StyleSheet } from "react-native";
+import PropTypes from "prop-types"
+import React from "react"
+import { capitalize as C } from "lodash"
+import { Text, TouchableOpacity, StyleSheet } from "react-native"
 
 export default class Button extends React.Component {
   static propTypes = {
@@ -9,7 +9,7 @@ export default class Button extends React.Component {
     accessibilityLabel: PropTypes.string,
     disabled: PropTypes.bool,
     buttonType: PropTypes.string
-  };
+  }
 
   render() {
     let buttonProps = {
@@ -18,10 +18,10 @@ export default class Button extends React.Component {
       accessibilityTraits: "button",
       accessibilityComponentType: "button",
       disabled: this.props.disabled
-    };
+    }
 
     if (!this.props.disabled) {
-      [
+      ;[
         "onPress",
         "onPressIn",
         "onPressOut",
@@ -30,8 +30,8 @@ export default class Button extends React.Component {
         "delayPressOut",
         "delayLongPress"
       ].map(prop => {
-        buttonProps[prop] = this.props[prop];
-      });
+        buttonProps[prop] = this.props[prop]
+      })
     }
 
     let buttonStyle = [
@@ -39,12 +39,12 @@ export default class Button extends React.Component {
       this.props.disabled
         ? styles.buttonDisabled
         : styles[`button${C(this.props.buttonType)}`]
-    ];
+    ]
 
     let textStyle = [
       styles.text,
       this.props.disabled ? styles.textDisabled : null
-    ];
+    ]
 
     return (
       <TouchableOpacity {...buttonProps} style={buttonStyle}>
@@ -52,7 +52,7 @@ export default class Button extends React.Component {
           {this.props.children.length > 0 ? this.props.children : `Click Me`}
         </Text>
       </TouchableOpacity>
-    );
+    )
   }
 }
 
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
   buttonDisabled: {
     backgroundColor: `#6c757d`
   }
-});
+})

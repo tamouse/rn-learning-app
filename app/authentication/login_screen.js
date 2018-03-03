@@ -1,6 +1,6 @@
-import React from "react";
-import { View, TextInput, StyleSheet } from "react-native";
-import Button from "../components/button";
+import React from "react"
+import { View, TextInput, StyleSheet } from "react-native"
+import Button from "../components/button"
 
 export default class LoginScreen extends React.Component {
   // constructor() {
@@ -20,36 +20,36 @@ export default class LoginScreen extends React.Component {
     account_slug: "",
     username: "",
     password: ""
-  };
+  }
 
   handleSubdomainChange = account_slug => {
-    this.setState({ account_slug });
-  };
+    this.setState({ account_slug })
+  }
 
   handleUsernameChange = username => {
-    this.setState({ username });
-  };
+    this.setState({ username })
+  }
 
   handlePasswordChange = password => {
-    this.setState({ password });
-  };
+    this.setState({ password })
+  }
 
   submitLogin = () => {
-    console.log("login");
-    console.log(this.state);
+    console.log("login")
+    console.log(this.state)
     this.setState({
       account_slug: "",
       username: "",
       password: ""
-    });
-  };
+    })
+  }
 
   render() {
     let inputBoxProps = {
       style: styles.inputBox,
       autoCorrect: false,
       autoCapitalize: `none`
-    };
+    }
     return (
       <View
         style={{
@@ -96,7 +96,7 @@ export default class LoginScreen extends React.Component {
           Log In
         </Button>
       </View>
-    );
+    )
   }
 }
 
@@ -109,4 +109,4 @@ const styles = StyleSheet.create({
     width: 250,
     margin: 5
   }
-});
+})

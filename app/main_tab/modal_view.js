@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Text, View, Button, Modal, StyleSheet } from "react-native";
+import React, { Component } from "react"
+import { Text, View, Button, Modal, StyleSheet } from "react-native"
 
 /*
  * I'm trying to learn how `react-native-modalbox` doesn't take up the whole screen.
@@ -11,14 +11,14 @@ export default class ModalView extends Component {
   state = {
     modalVisible: false,
     transparent: true
-  };
+  }
 
   openModal() {
-    this.setState({ modalVisible: true });
+    this.setState({ modalVisible: true })
   }
 
   closeModal() {
-    this.setState({ modalVisible: false });
+    this.setState({ modalVisible: false })
   }
 
   render() {
@@ -30,7 +30,7 @@ export default class ModalView extends Component {
           <Button onPress={() => this.closeModal()} title="Close modal" />
         </View>
       </View>
-    );
+    )
 
     return (
       <View style={styles.container}>
@@ -38,7 +38,7 @@ export default class ModalView extends Component {
 
         <Button onPress={() => this.openModal()} title="Open modal" />
       </View>
-    );
+    )
   }
 }
 
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
     width: "100%",
     zIndex: 4
   }
-});
+})

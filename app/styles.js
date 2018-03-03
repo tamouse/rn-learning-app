@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
   screen: {
@@ -26,6 +26,6 @@ export const styles = StyleSheet.create({
     color: `blue`,
     fontSize: 30
   }
-});
+})
 
-export default styles;
+export default styles
