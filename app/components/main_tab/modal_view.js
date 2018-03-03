@@ -13,30 +13,27 @@ export default class ModalView extends Component {
     transparent: true
   }
 
-  openModal() {
+  openModal = () => {
     this.setState({ modalVisible: true })
   }
 
-  closeModal() {
+  closeModal = () => {
     this.setState({ modalVisible: false })
   }
 
   render() {
-    let modalBody = (
-      <View style={styles.modalContainer}>
-        <View style={styles.innerContainer}>
-          <Text>This is content inside of modal component</Text>
-          <Text>The state is {this.state.transparent ? "true" : "false"}</Text>
-          <Button onPress={() => this.closeModal()} title="Close modal" />
-        </View>
-      </View>
-    )
-
     return (
       <View style={styles.container}>
-        {this.state.modalVisible ? modalBody : null}
+        <Modal visible={this.state.modalVisible} transparent={true} onRequestClose={()=>{}} animationType={'fade'} >
+          <View style={styles.modalContainer}>
+            <View style={styles.innerContainer}>
+              <Text>This is not really a modal</Text>
+              <Button onPress={this.closeModal} title="Close modal" />
+            </View>
+          </View>
+        </Modal>
 
-        <Button onPress={() => this.openModal()} title="Open modal" />
+        <Button onPress={this.openModal} title="Open modal" />
       </View>
     )
   }
@@ -46,6 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
+    alignItems: "center",
     zIndex: 2,
     height: "100%",
     width: "100%"
@@ -53,16 +51,15 @@ const styles = StyleSheet.create({
   modalContainer: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "grey",
-    zIndex: 3,
-    height: "100%",
-    width: "100%"
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.5)"
   },
   innerContainer: {
-    alignItems: "center",
-    backgroundColor: "white",
-    height: "100%",
-    width: "100%",
-    zIndex: 4
+    backgroundColor: 'white',
+    borderRadius: 4,
+    width: 250,
+    padding: 20,
+    top: 0,
+    justifyContent: 'center'
   }
 })
