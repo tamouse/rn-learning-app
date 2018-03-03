@@ -7,6 +7,8 @@ import { Text } from "react-native"
 import { TabNavigator, TabBarBottom } from "react-navigation"
 import Main from "./components/main_tab"
 import Alt from "./components/alternate_tab"
+import Logout from "./authentication/logout_screen"
+
 
 // The RootNavigator will form the basis for Tab navigation
 export default (RootNavigator = TabNavigator(
@@ -16,6 +18,9 @@ export default (RootNavigator = TabNavigator(
     },
     Alt: {
       screen: Alt
+    },
+    Logout: {
+      screen: Logout
     }
   },
   {

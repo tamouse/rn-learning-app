@@ -17,10 +17,19 @@ export class App extends React.Component {
       })
     }
   }
+
+  loggedOut = () => {
+    this.setState({
+      isLoggedIn: false,
+      userInfo: {}
+    })
+  }
+
+
   render() {
     const props = this.props
     if (this.state.isLoggedIn) {
-      return <MainApp {...props} userInfo={this.state.userInfo} />
+      return <MainApp {...props} userInfo={this.state.userInfo} loggedOut={this.loggedOut} />
     } else {
       return <Login {...props} loggedOn={this.loggedIn} />
     }
