@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet } from "react-native"
 
 export const styles = StyleSheet.create({
   screen: {
@@ -10,21 +10,21 @@ export const styles = StyleSheet.create({
   header: {
     width: `100%`,
     flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'azure'
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "azure"
   },
   headerText: {
     fontSize: 30,
-    color: 'black'
+    color: "black"
   },
   defaultText: {
     color: `black`
   },
   h1: {
     color: `blue`,
-    fontSize: 30,
+    fontSize: 30
   }
 })
 

@@ -1,40 +1,33 @@
-import React from 'react'
-import {View, TextInput, StyleSheet} from 'react-native'
-import Button from '../components/button'
+import React from "react"
+import { View, TextInput, StyleSheet } from "react-native"
+import Button from "../components/button"
 
 export default class LoginScreen extends React.Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     account_slug: '',
-  //     username: '',
-  //     password: ''
-  //   }
-  //   this.handleSubdomainChange = this.handleSubdomainChange.bind(this)
-  //   this.handleUsernameChange = this.handleUsernameChange.bind(this)
-  //   this.handlePasswordChange = this.handlePasswordChange.bind(this)
-  //   this.submitLogin = this.submitLogin.bind(this)
-  // }
-
   state = {
-    account_slug: '',
-    username: '',
-    password: ''
+    account_slug: "",
+    username: "",
+    password: ""
   }
 
-  handleSubdomainChange = account_slug => {this.setState({account_slug})}
+  handleSubdomainChange = account_slug => {
+    this.setState({ account_slug })
+  }
 
-  handleUsernameChange = username => {this.setState({username})}
+  handleUsernameChange = username => {
+    this.setState({ username })
+  }
 
-  handlePasswordChange = password => {this.setState({password})}
+  handlePasswordChange = password => {
+    this.setState({ password })
+  }
 
   submitLogin = () => {
     console.log("login")
     console.log(this.state)
     this.setState({
-      account_slug: '',
-      username: '',
-      password: ''
+      account_slug: "",
+      username: "",
+      password: ""
     })
   }
 
@@ -45,30 +38,34 @@ export default class LoginScreen extends React.Component {
       autoCapitalize: `none`
     }
     return (
-      <View style={{
-        alignItems: `center`,
-        justifyContent: `space-between`
-      }}>
-        <View styke={{
-          flexDirection: `column`,
-          justifyContent: `space-between`,
-          alignItems: `center`
-        }}>
+      <View
+        style={{
+          alignItems: `center`,
+          justifyContent: `space-between`
+        }}
+      >
+        <View
+          styke={{
+            flexDirection: `column`,
+            justifyContent: `space-between`,
+            alignItems: `center`
+          }}
+        >
           <TextInput
             {...inputBoxProps}
-            placeholder='account slug'
+            placeholder="account slug"
             value={this.state.account_slug}
             onChangeText={this.handleSubdomainChange}
           />
           <TextInput
             {...inputBoxProps}
-            placeholder='user name'
+            placeholder="user name"
             value={this.state.username}
             onChangeText={this.handleUsernameChange}
           />
           <TextInput
             {...inputBoxProps}
-            placeholder='password'
+            placeholder="password"
             value={this.state.password}
             onChangeText={this.handlePasswordChange}
           />
@@ -77,9 +74,11 @@ export default class LoginScreen extends React.Component {
           buttonType="primary"
           onPress={this.submitLogin}
           accessibilityLabel="Login Button"
-          disabled={this.state.account_slug === '' ||
-          this.state.username === '' ||
-          this.state.password === ''}
+          disabled={
+            this.state.account_slug === "" ||
+            this.state.username === "" ||
+            this.state.password === ""
+          }
         >
           Log In
         </Button>
