@@ -5,12 +5,13 @@ export class LoginContainer extends React.Component {
 
   state = {
     loading: false,
-    loggedIn: false
+    loggedIn: false,
+    errorMsg: ''
   }
 
   closeModal = () => {
     setTimeout(() => {
-      this.setState({ loading: false })
+      this.setState({ loading: false, errorMsg: 'not logged in' })
     }, 5000)
   }
 
@@ -20,7 +21,7 @@ export class LoginContainer extends React.Component {
 
   render() {
     return (
-      <LoginScreen loading={this.state.loading} submitLogin={this.submitLogin}/>
+      <LoginScreen loading={this.state.loading} submitLogin={this.submitLogin} errorMsg={this.state.errorMsg}/>
     )
   }
 }

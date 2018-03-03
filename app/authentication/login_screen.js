@@ -8,11 +8,13 @@ export default class LoginScreen extends React.Component {
   static propTypes = {
     loading: T.bool,
     submitLogin: T.func,
+    errorMsg: T.string,
   }
 
   static defaultProps = {
     loading: false,
     submitLogin: () => {},
+    errorMsg: ''
   }
 
   clearState = {
@@ -58,12 +60,25 @@ export default class LoginScreen extends React.Component {
     this.props.submitLogin(params)
   }
 
+  renderIfErrors = () => {
+    if (this.props.errorMsg) {
+      return (
+        <View style={styles.errorBox}>
+          <Text style={styles.errorText}>{this.props.errorMsg}</Text>
+        </View>
+      )
+    }
+  }
+
+
+
   render() {
     let inputBoxProps = {
       style: styles.inputBox,
       autoCorrect: false,
       autoCapitalize: `none`
     }
+
     return (
       <View style={styles.mainScreen}>
         <View style={styles.container}>
@@ -93,6 +108,7 @@ export default class LoginScreen extends React.Component {
           >
             Log In
           </Button>
+          {this.renderIfErrors()}
           <Modal visible={this.props.loading}>
             <View style={styles.container}>
               <Text style={styles.loading}>I'm Loading, yo</Text>
@@ -133,5 +149,16 @@ const styles = StyleSheet.create({
     alignItems: `center`,
     justifyContent: `space-between`,
     backgroundColor: "red"
+  },
+  errorBox: {
+    padding: 5
+  },
+  errorText: {
+    backgroundColor: "#ffe4e1",
+    borderColor: 'red',
+    borderWidth: 1,
+    padding: 20,
+    color: 'red',
+
   }
 })
