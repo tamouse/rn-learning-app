@@ -146,3 +146,10 @@ Holy cow, login and out, no redux needed, still! Wooo!!  The key thing was using
 
 
 
+## 0010/navigate-to-generic-from-either-stack
+
+I wanted to be sure that a particular component, not a part of any specific stack, could be navigated to from any of the stacks. I created a Generic component (yay, naming!) and added it to each of the stacks. I added a button to go to that component on the home screen of each stack.
+
+While there, I also made the modal screen on the main stack look a little bit better (i.e., more like a modal).
+
+I changed the app short name to "AAaaaPP!" so it shows up in the android sim app screen at the top. :)
