@@ -6,6 +6,37 @@ I'm using branches to try to isolate work and learning.
 
 This repo was originally created using [Create React Native App](README-ORIGINAL.md) and was ejected to provide a closer resemblance to my work environment.
 
+## Quick guide to setting this up for demo
+
+### Prerequisites
+
+- XCode
+- Android Studio
+- Genymotion, optional
+
+- you'll also need some sort of service that you can log into that takes an account slug as the first part of the path_info:
+
+    https://server/account_slug/login_path
+    
+**NOTE:** This is a learning app I'm writing, not a tutorial, and the service I'm using is one at the company I work for which is **not** open to the public. I'm not going to provide a service for anyone else to try this out with. You're on your own there, matey.
+
+### Install
+
+- run `yarn` to install libraries and such
+
+- create an `.env` file in the root directory, using `.env.sample` as a guide.
+
+  - `PROTOCOL` - `http` or `hppts` probably
+  - `SERVER_URL` - the host part of the URL used to log in and run queries
+  - `LOGIN_PATH` - path components that come after the account slug
+  
+## Demo
+
+- run `yarn ios` to fire up the applicaiton in an IOS simulator
+- run `yarn android` to fire it up with an android simulator
+
+Log in with credentials for the service you've set up.
+
 ## 0001/eject
 
 After creating the new app, I ejected it using `yarn eject` and added in a few things to make the tests keep passing, just as `jest`, `eslint`, and `prettier`.
