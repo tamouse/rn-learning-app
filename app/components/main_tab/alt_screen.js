@@ -7,7 +7,7 @@ export default class MainAltScreen extends React.Component {
     return (
       <View style={styles.screen}>
         <Text style={styles.h1}>Main Tab</Text>
-        <Text style={styles.text}>The Main Alternate Screen</Text>
+        <Text style={styles.text}>The Main Second Screen</Text>
       </View>
     )
   }
