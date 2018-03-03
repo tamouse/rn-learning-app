@@ -19,7 +19,7 @@ export function login(params) {
     password
   })
 
-  fetch(url, {
+  return fetch(url, {
     method,
     headers,
     body
