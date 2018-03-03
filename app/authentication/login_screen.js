@@ -3,19 +3,6 @@ import { View, TextInput, StyleSheet } from "react-native"
 import Button from "../components/button"
 
 export default class LoginScreen extends React.Component {
-  // constructor() {
-  //   super()
-  //   this.state = {
-  //     account_slug: '',
-  //     username: '',
-  //     password: ''
-  //   }
-  //   this.handleSubdomainChange = this.handleSubdomainChange.bind(this)
-  //   this.handleUsernameChange = this.handleUsernameChange.bind(this)
-  //   this.handlePasswordChange = this.handlePasswordChange.bind(this)
-  //   this.submitLogin = this.submitLogin.bind(this)
-  // }
-
   state = {
     account_slug: "",
     username: "",
