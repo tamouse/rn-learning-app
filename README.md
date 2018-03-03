@@ -56,6 +56,8 @@ I left a question on stackoverflow: <https://stackoverflow.com/questions/4872589
 
 Put a header on each stack.
 
+Ok, this didn't quite work out. I'll come back to it.
+
 ## 0007/eslint-and-prettier
 
 Look, we should do this right from the start, right?
