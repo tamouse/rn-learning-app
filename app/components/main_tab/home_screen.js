@@ -1,11 +1,19 @@
 import React from "react"
-import T from "prop-types"
+// import T from "prop-types"
 import { Button, Text, View } from "react-native"
 import styles from "../../styles"
 import { getCredentials } from "../../authentication/actions"
 
 export default class MainHomeScreen extends React.Component {
-  static propTypes = {}
+  // static propTypes = {}
+
+  // This means of getting the title to be centered isn't really tenable.
+  // I have to put something like this in *every* component of the stack,
+  // omitting the left side for screens on the stack beyond the first.
+  // static navigationOptions = {
+  //   headerLeft: <Text>*</Text>,
+  //   headerRight: <Text>*</Text>
+  // }
 
   state = {
     account_slug: "Unknown!"

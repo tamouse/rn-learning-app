@@ -354,92 +354,37 @@ exports[`Testing RootNavigator renders the RootNavigator 1`] = `
                 </View>
               </View>
               <View
-                collapsable={undefined}
-                onLayout={[Function]}
-                pointerEvents="box-none"
                 style={
                   Object {
-                    "backgroundColor": "#F7F7F7",
-                    "borderBottomColor": "#A7A7AA",
-                    "borderBottomWidth": 0.5,
-                    "height": 64,
-                    "paddingBottom": 0,
-                    "paddingLeft": 0,
-                    "paddingRight": 0,
-                    "paddingTop": 20,
+                    "alignItems": "center",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                />
-                <View
-                  style={
-                    Object {
-                      "flex": 1,
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
                     }
                   }
                 >
-                  <View
+                  <Text
+                    accessible={true}
+                    allowFontScaling={true}
+                    ellipsizeMode="tail"
                     style={
                       Object {
-                        "bottom": 0,
-                        "flexDirection": "row",
-                        "left": 0,
-                        "position": "absolute",
-                        "right": 0,
-                        "top": 0,
+                        "color": "black",
+                        "fontSize": 20,
+                        "fontWeight": "900",
                       }
                     }
                   >
-                    <View
-                      collapsable={undefined}
-                      pointerEvents="box-none"
-                      style={
-                        Object {
-                          "alignItems": "center",
-                          "backgroundColor": "transparent",
-                          "bottom": 0,
-                          "flexDirection": "row",
-                          "justifyContent": "center",
-                          "left": 0,
-                          "opacity": 1,
-                          "position": "absolute",
-                          "right": 0,
-                          "top": 0,
-                        }
-                      }
-                    >
-                      <Text
-                        accessibilityTraits="header"
-                        accessible={true}
-                        allowFontScaling={true}
-                        collapsable={undefined}
-                        ellipsizeMode="tail"
-                        numberOfLines={1}
-                        onLayout={[Function]}
-                        style={
-                          Object {
-                            "color": "rgba(0, 0, 0, .9)",
-                            "fontSize": 17,
-                            "fontWeight": "700",
-                            "marginHorizontal": 16,
-                            "textAlign": "center",
-                          }
-                        }
-                      >
-                        Main
-                      </Text>
-                    </View>
-                  </View>
+                    Main Stack Header
+                  </Text>
                 </View>
               </View>
             </View>
@@ -600,7 +545,7 @@ exports[`Testing RootNavigator renders the RootNavigator 1`] = `
               }
             }
           >
-            Main
+            Home
           </Text>
         </View>
       </View>
