@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    backgroundColor: "red"  // NOTE: to make it obvious where this is
   },
   inner: {
     flex: 1,

@@ -3,6 +3,7 @@ import React from "react"
 import { Button, Text, View } from "react-native"
 import styles from "../../styles"
 import { getCredentials } from "../../authentication/actions"
+import { DefaultRightHeader, DefaultLeftHeader } from "./defaultSides"
 
 export default class MainHomeScreen extends React.Component {
   // static propTypes = {}
@@ -14,6 +15,10 @@ export default class MainHomeScreen extends React.Component {
   //   headerLeft: <Text>*</Text>,
   //   headerRight: <Text>*</Text>
   // }
+  static navigationOptions = {
+    headerLeft: DefaultLeftHeader,
+    headerRight: DefaultRightHeader
+  }
 
   state = {
     account_slug: "Unknown!"

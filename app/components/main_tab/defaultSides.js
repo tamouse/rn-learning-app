@@ -4,17 +4,24 @@
  * This always overrides the sides :(
  */
 
-// import React from "react"
-// import { Text } from "react-native"
-//
-// export const DefaultLeftHeader = props => {
-//   return (
-//     <Text>-</Text>
-//   )
-// }
-//
-// export const DefaultRightHeader = props => {
-//   return (
-//     <Text>+</Text>
-//   )
-// }
+import React from "react"
+import { Text, StyleSheet } from "react-native"
+
+export const DefaultLeftHeader = props => {
+  return (
+    <Text style={s.blank}>-</Text>
+  )
+}
+
+export const DefaultRightHeader = props => {
+  return (
+    <Text style={s.blank}>+</Text>
+  )
+}
+
+const s = StyleSheet.create({
+  blank: {
+    backgroundColor: "white",
+    color: "white"
+  }
+})
