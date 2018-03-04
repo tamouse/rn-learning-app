@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing MainApp matches the snapshot 1`] = `
+exports[`Testing RootNavigator renders the RootNavigator 1`] = `
 <View
   loaded={
     Array [

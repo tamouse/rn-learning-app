@@ -1,9 +1,11 @@
 import React from "react"
-import { shallow } from "enzyme"
+import rendereer from "react-test-renderer"
 import { RootNavigator} from "../../app/routes"
 
 describe('Testing RootNavigator', function () {
   it('renders the RootNavigator', function () {
-    expect(shallow(<RootNavigator/>)).toBeTruthy()
+    expect(rendereer.create(
+      <RootNavigator/>
+    )).toMatchSnapshot()
   });
 });
