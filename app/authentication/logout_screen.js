@@ -8,7 +8,7 @@ export class LogoutScreen extends React.Component {
   static propTypes = {
     navigation: T.object.isRequired,
     screenProps: T.shape({
-      loggedOut: T.func // callback for when the user logs out
+      loggedOut: T.func.isRequired // callback for when the user logs out
     })
   }
 
@@ -21,6 +21,7 @@ export class LogoutScreen extends React.Component {
           Are you sure you want to log out?
         </Text>
         <Button
+          id={`logout_button`}
           buttonType="primary"
           onPress={loggedOut}
           accessibilityLabel={"logout button"}
