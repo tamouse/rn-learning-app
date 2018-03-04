@@ -169,7 +169,7 @@ The functions available include setting a generic user/passwd combination, or on
 
 I'm not sure if I should pack all the logic into the login container, or put it all at the top level. The top level state is presently holding the logged in status and user info in it's state, so it probably makes sense to hang it there as well. Another is to go back to putting it in the `authentication` module, and export methods, still staying away from full-on redux if possible.
 
-Upon further thought, the information I need to save from the login includes the user's account slug. I can save both account_slug and password as generic credentials. Changing the login actions api a bit to return all that, plus error status and message.
+Upon further thought, the information I need to save from the login includes the user's account slug. I can save both account_slug and api token as generic credentials. Changing the login actions api a bit to return all that, plus error status and message.
 
 That was harder than I thought, but all good. Had to play around with async/await and promises in lifecycle methods to get it all lined up. Now I can obtain the login account and api token in any component.
 
