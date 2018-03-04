@@ -10,7 +10,7 @@ import Alt from "./components/alternate_tab"
 import Logout from "./authentication/logout_screen"
 
 // The RootNavigator will form the basis for Tab navigation
-export default (RootNavigator = TabNavigator(
+export const RootNavigator = TabNavigator(
   {
     Home: {
       screen: Main
@@ -41,4 +41,6 @@ export default (RootNavigator = TabNavigator(
     animationEnabled: false,
     swipeEnabled: false
   }
-))
+)
+
+export default RootNavigator

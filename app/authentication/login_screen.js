@@ -62,7 +62,9 @@ export default class LoginScreen extends React.Component {
     if (this.props.errorMsg) {
       return (
         <View style={styles.errorBox}>
-          <Text style={styles.errorText}>{this.props.errorMsg}</Text>
+          <Text id={`error_message_text`} style={styles.errorText}>
+            {this.props.errorMsg}
+          </Text>
         </View>
       )
     }
@@ -107,7 +109,9 @@ export default class LoginScreen extends React.Component {
           {this.renderIfErrors()}
           <Modal visible={this.props.loading} onRequestClose={() => {}}>
             <View style={styles.container}>
-              <Text style={styles.loading}>I'm Loading, yo</Text>
+              <Text id={`loading_modal_text`} style={styles.loading}>
+                I'm Loading, yo
+              </Text>
             </View>
           </Modal>
         </View>
