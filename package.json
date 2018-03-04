@@ -15,6 +15,7 @@
     "jest-react-native": "^18.0.0",
     "prettier": "^1.10.2",
     "react-dom": "^16.2.0",
+    "react-native-mock": "gabrielrotbart/react-native-mock#update_to_support_react_16",
     "react-test-renderer": "16.2.0"
   },
   "scripts": {
@@ -50,6 +51,7 @@
     "apollo-link-http": "^1.3.2",
     "graphql": "0.12",
     "graphql-tag": "^2.7.3",
+    "lodash": "^4.17.5",
     "prop-types": "^15.6.1",
     "react": "16.2.0",
     "react-apollo": "^2.0.4",

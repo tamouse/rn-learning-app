@@ -1,9 +1,15 @@
 import React from "react"
+import T from "prop-types"
+import { at } from "lodash" // because I am SICK of endless obj && obj.prop && obj.prop.subprop ...
 import LoginScreen from "./login_screen"
 import { login } from "./login_service"
 import { setCredentials } from "./actions"
 
 export class LoginContainer extends React.Component {
+  static propTypes = {
+    loggedOn: T.func.isRequired // callback when the login succeeds
+  }
+
   state = {
     loading: false,
     errorMsg: ""
@@ -20,11 +26,8 @@ export class LoginContainer extends React.Component {
         }
       })
       .then(user => {
-        const account =
-          user && user.account && user.account.subdomain
-            ? user.account.subdomain
-            : null
-        const token = user && user.api_token ? user.api_token : null
+        const account = at(user, ['account.subdomain'])
+        const token = at(user, ['api_token'])
         if (account && token) {
           setCredentials(account, token)
             .then(() => {

@@ -1,11 +1,5 @@
 import { login } from "../../../app/authentication/login_service"
-jest.mock("react-native-config", () => {
-  return {
-    PROTOCOL: "https",
-    SERVER_URL: "server",
-    LOGIN_PATH: "login"
-  }
-})
+jest.mock("react-native-config")
 
 describe("test login service", () => {
   describe("calls fetch with the expected parameters", () => {
@@ -33,6 +27,18 @@ describe("test login service", () => {
     it('is called with the right body',  ()=>{
       const expectedBody = { username: "user", password: "pass" }
       expect(JSON.parse(global.fetch.mock.calls[0][1].body)).toEqual(expectedBody)
+    });
+
+    it('is called with the right method', function () {
+      expect(global.fetch.mock.calls[0][1].method).toEqual('POST')
+    });
+
+    it('is called with the right headers', function () {
+      const expectedHeaders = {
+        "Content-type": "application/json",
+        "Accept": "application/json"
+      }
+      expect(global.fetch.mock.calls[0][1].headers).toEqual(expectedHeaders)
     });
 
   })
