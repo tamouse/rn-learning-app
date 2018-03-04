@@ -174,3 +174,43 @@ Upon further thought, the information I need to save from the login includes the
 That was harder than I thought, but all good. Had to play around with async/await and promises in lifecycle methods to get it all lined up. Now I can obtain the login account and api token in any component.
 
 
+## 0012/fastlane
+
+This step is about creating the downstream processes to get an app released. While **this** app should never see the light of day on an app store, it's still something i really need to understand.
+
+Following along with this tutorial / description initially: https://medium.com/react-native-training/fastlane-for-react-native-ios-android-app-devops-8ca85bee614e
+
+### App Transport Security (IOS)
+
+The [RN Docs] talk about it [here](https://facebook.github.io/react-native/docs/running-on-device.html#1-enable-app-transport-security):
+
+[RN Docs]: https://facebook.github.io/react-native/docs/running-on-device.html#building-your-app-for-production "ReactNative Official Docs"
+
+> ### Enable App Transport Security
+> App Transport Security is a security feature introduced in iOS 9 that rejects all HTTP requests that are not sent over HTTPS. This can result in HTTP traffic being blocked, including the developer React Native server. ATS is disabled for localhost by default in React Native projects in order to make development easier.
+>
+> You should re-enable ATS prior to building your app for production by removing the localhost entry from the NSExceptionDomains dictionary in your Info.plist file in the ios/ folder. You can also re-enable ATS from within Xcode by opening your target properties under the Info pane and editing the App Transport Security Settings entry.
+
+
+### some stuff
+
+- turns out i probably need to add some icons: 
+  - how to add icons: https://stackoverflow.com/questions/34329715/how-to-add-icons-to-react-native-app
+  - a possible tool: https://github.com/bamlab/generator-rn-toolbox
+  
+- ios code signing: https://codesigning.guide/
+
+- https://facebook.github.io/react-native/docs/signed-apk-android.html
+
+- apk keystore: https://facebook.github.io/react-native/docs/signed-apk-android.html#generating-a-signing-key
+
+
+### And here's the kicker:
+
+- It costs $99/year for the Apple individual developer program. Which I don't want to pay myself just to learn how to do this. :(
+- Google Play developer program is $25. I'm not sure if that's once or annually or ???
+
+
+Oh, I had hopes.
+
+How do people learn this on their own? I guess I will stick with whatever OJT I can still get.
