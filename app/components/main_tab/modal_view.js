@@ -24,7 +24,12 @@ export default class ModalView extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Modal visible={this.state.modalVisible} transparent={true} onRequestClose={()=>{}} animationType={'fade'} >
+        <Modal
+          visible={this.state.modalVisible}
+          transparent={true}
+          onRequestClose={() => {}}
+          animationType={"fade"}
+        >
           <View style={styles.modalContainer}>
             <View style={styles.innerContainer}>
               <Text>This is not really a modal</Text>
@@ -55,11 +60,11 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(0,0,0,0.5)"
   },
   innerContainer: {
-    backgroundColor: 'white',
+    backgroundColor: "white",
     borderRadius: 4,
     width: 250,
     padding: 20,
     top: 0,
-    justifyContent: 'center'
+    justifyContent: "center"
   }
 })

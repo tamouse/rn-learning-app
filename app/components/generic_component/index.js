@@ -3,7 +3,6 @@ import { View, Text } from "react-native"
 import styles from "../../styles"
 
 export class Generic extends React.Component {
-
   render() {
     return (
       <View style={styles.screen}>

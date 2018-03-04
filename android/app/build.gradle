@@ -138,6 +138,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-keychain')
     compile project(':react-native-config')
     compile project(':react-native-sensitive-info')
     compile fileTree(dir: "libs", include: ["*.jar"])

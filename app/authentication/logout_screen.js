@@ -7,7 +7,9 @@ import styles from "../styles"
 export class LogoutScreen extends React.Component {
   static propTypes = {
     navigation: T.object.isRequired,
-    screenProps: T.object
+    screenProps: T.shape({
+      loggedOut: T.func // callback for when the user logs out
+    })
   }
 
   render() {
