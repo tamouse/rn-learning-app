@@ -1,31 +1,16 @@
 import React from "react"
-import T from "prop-types"
 import LoginScreen from "./login_screen"
 import { login } from "./login_service"
+import { setCredentials } from "./actions"
 
 export class LoginContainer extends React.Component {
-  static propTypes = {
-    loggedOn: T.func
-  }
-
-  static defaultProps = {
-    loggedOn: () => {}
-  }
-
   state = {
     loading: false,
-    loggedIn: false,
     errorMsg: ""
   }
 
-  closeModal = () => {
-    setTimeout(() => {
-      this.setState({ loading: false, errorMsg: "not logged in" })
-    }, 5000)
-  }
-
   submitLogin = params => {
-    this.setState({ loading: true })
+    this.setState({ loading: true, errorMsg: "" })
     login(params)
       .then(response => {
         if (response.status < 400) {
@@ -35,8 +20,24 @@ export class LoginContainer extends React.Component {
         }
       })
       .then(user => {
-        this.props.loggedOn(user)
-        this.setState({ loading: false })
+        const account =
+          user && user.account && user.account.subdomain
+            ? user.account.subdomain
+            : null
+        const token = user && user.api_token ? user.api_token : null
+        if (account && token) {
+          setCredentials(account, token)
+            .then(() => {
+              console.log(`DEBUG>>>>>> we think we saved the token`)
+              this.setState({ loading: false }, this.props.loggedOn())
+            })
+            .catch(err => {
+              this.setState({
+                loading: false,
+                errorMsg: `Unable to save login: ${err}`
+              })
+            })
+        }
       })
       .catch(() => {
         this.setState({

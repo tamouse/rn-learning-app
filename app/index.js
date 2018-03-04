@@ -1,46 +1,49 @@
 import React from "react"
 import { Login } from "./authentication"
 import { MainApp } from "./main"
+import { isLoggedIn, clearCredentials } from "./authentication/actions"
 
 export class App extends React.Component {
   state = {
-    isLoggedIn: true,
-    userInfo: {
-      name: "Nobody",
-      account: {
-        company_name: "None"
+    isLoggedIn: false,
+    didLogin: false
+  }
+
+  onLogin = () => {
+    this.setState({ didLogin: true })
+  }
+
+  onLogout = () => {
+    clearCredentials().then(() => {
+      this.setState({ isLoggedIn: false })
+    })
+  }
+
+  componentWillMount() {
+    isLoggedIn().then(status => {
+      this.setState({ isLoggedIn: status, didLogin: false })
+    })
+  }
+
+  componentDidUpdate(_prevProps, prevState) {
+    isLoggedIn().then(status => {
+      if (status !== prevState.isLoggedIn) {
+        console.log(
+          `DEBUG>>>>>>> we noticed a change in the login status: ${
+            prevState.isLoggedIn
+          }`
+        )
+        this.setState({ isLoggedIn: status, didLogin: false })
       }
-    }
-  }
-
-  loggedIn = userInfo => {
-    if (userInfo && userInfo.api_token) {
-      this.setState({
-        isLoggedIn: true,
-        userInfo
-      })
-    }
-  }
-
-  loggedOut = () => {
-    this.setState({
-      isLoggedIn: false,
-      userInfo: {}
     })
   }
 
   render() {
     const props = this.props
     if (this.state.isLoggedIn) {
-      return (
-        <MainApp
-          {...props}
-          userInfo={this.state.userInfo}
-          loggedOut={this.loggedOut}
-        />
-      )
+      return <MainApp {...props} loggedOut={this.onLogout} />
     } else {
-      return <Login {...props} loggedOn={this.loggedIn} />
+      return <Login {...props} loggedOn={this.onLogin} />
     }
   }
 }

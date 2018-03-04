@@ -153,3 +153,24 @@ I wanted to be sure that a particular component, not a part of any specific stac
 While there, I also made the modal screen on the main stack look a little bit better (i.e., more like a modal).
 
 I changed the app short name to "AAaaaPP!" so it shows up in the android sim app screen at the top. :)
+
+## 0011/secure-storage
+
+The common way to store app info is using RN's `AsyncStorage` but it is well known this is not secure. Since I want to keep track of the logged in user's info, most especially the API token, I am seeking something more secure.
+
+Doing a search, I came across a couple articles, but mostly this seems like an underserved area for ReactNative.
+
+- http://randycoulman.com/blog/2017/07/25/secure-storage-in-react-native/
+- https://github.com/oblador/react-native-keychain
+
+I'm trying the latter as it seems a little more fleshed out.
+
+The functions available include setting a generic user/passwd combination, or one specific to a server. Instead of the password in this case I'll be saving the api token, and using a dummy string for the username ("loggedInUser" maybe). Since the server is on an environment variable and it won't change for any given user, there's no need to use the specific functions; generic should be fine.
+
+I'm not sure if I should pack all the logic into the login container, or put it all at the top level. The top level state is presently holding the logged in status and user info in it's state, so it probably makes sense to hang it there as well. Another is to go back to putting it in the `authentication` module, and export methods, still staying away from full-on redux if possible.
+
+Upon further thought, the information I need to save from the login includes the user's account slug. I can save both account_slug and password as generic credentials. Changing the login actions api a bit to return all that, plus error status and message.
+
+That was harder than I thought, but all good. Had to play around with async/await and promises in lifecycle methods to get it all lined up. Now I can obtain the login account and api token in any component.
+
+
