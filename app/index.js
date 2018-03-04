@@ -40,7 +40,8 @@ export class App extends React.Component {
 
   render() {
     const props = this.props
-    if (true) { // temporarily so i can just work on formatting
+    if (true) {
+      // temporarily so i can just work on formatting
       return <MainApp {...props} loggedOut={this.onLogout} />
     } else {
       return <Login {...props} loggedOn={this.onLogin} />

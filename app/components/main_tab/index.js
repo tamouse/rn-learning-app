@@ -18,7 +18,7 @@ export default (MainStack = StackNavigator(
     navigationOptions: {
       // NOTE: Trying to override the default stack header didn't work the way I wanted.
       // header: MainStackHeader,
-      title: "Main",
+      title: "Main"
       // NOTE: The following doesn't work: these fill in all the screens of the stack :(
       // headerLeft: DefaultLeftHeader,
       // headerRight: DefaultRightHeader
