@@ -37,7 +37,6 @@ ShallowWrapper {
           allowFontScaling={true}
           autoCapitalize="none"
           autoCorrect={false}
-          id="account_slug_input"
           onChangeText={[Function]}
           placeholder="account slug"
           style={
@@ -56,7 +55,6 @@ ShallowWrapper {
           allowFontScaling={true}
           autoCapitalize="none"
           autoCorrect={false}
-          id="username_input"
           onChangeText={[Function]}
           placeholder="user name"
           style={
@@ -75,7 +73,6 @@ ShallowWrapper {
           allowFontScaling={true}
           autoCapitalize="none"
           autoCorrect={false}
-          id="password_input"
           onChangeText={[Function]}
           placeholder="password"
           style={
@@ -94,14 +91,12 @@ ShallowWrapper {
           accessibilityLabel="Login Button"
           buttonType="primary"
           disabled={true}
-          id="login_button"
           onPress={[Function]}
         >
           Log In
         </Button>
         <Component
           hardwareAccelerated={false}
-          id="loading_modal"
           onRequestClose={[Function]}
           visible={false}
         >
@@ -121,6 +116,7 @@ ShallowWrapper {
               accessible={true}
               allowFontScaling={true}
               ellipsizeMode="tail"
+              id="loading_modal_text"
               style={
                 Object {
                   "backgroundColor": "rebeccapurple",
@@ -154,7 +150,6 @@ ShallowWrapper {
             allowFontScaling={true}
             autoCapitalize="none"
             autoCorrect={false}
-            id="account_slug_input"
             onChangeText={[Function]}
             placeholder="account slug"
             style={
@@ -173,7 +168,6 @@ ShallowWrapper {
             allowFontScaling={true}
             autoCapitalize="none"
             autoCorrect={false}
-            id="username_input"
             onChangeText={[Function]}
             placeholder="user name"
             style={
@@ -192,7 +186,6 @@ ShallowWrapper {
             allowFontScaling={true}
             autoCapitalize="none"
             autoCorrect={false}
-            id="password_input"
             onChangeText={[Function]}
             placeholder="password"
             style={
@@ -211,7 +204,6 @@ ShallowWrapper {
             accessibilityLabel="Login Button"
             buttonType="primary"
             disabled={true}
-            id="login_button"
             onPress={[Function]}
           >
             Log In
@@ -219,7 +211,6 @@ ShallowWrapper {
           undefined,
           <Component
             hardwareAccelerated={false}
-            id="loading_modal"
             onRequestClose={[Function]}
             visible={false}
           >
@@ -239,6 +230,7 @@ ShallowWrapper {
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                id="loading_modal_text"
                 style={
                   Object {
                     "backgroundColor": "rebeccapurple",
@@ -273,7 +265,6 @@ ShallowWrapper {
             "allowFontScaling": true,
             "autoCapitalize": "none",
             "autoCorrect": false,
-            "id": "account_slug_input",
             "onChangeText": [Function],
             "placeholder": "account slug",
             "style": Object {
@@ -298,7 +289,6 @@ ShallowWrapper {
             "allowFontScaling": true,
             "autoCapitalize": "none",
             "autoCorrect": false,
-            "id": "username_input",
             "onChangeText": [Function],
             "placeholder": "user name",
             "style": Object {
@@ -323,7 +313,6 @@ ShallowWrapper {
             "allowFontScaling": true,
             "autoCapitalize": "none",
             "autoCorrect": false,
-            "id": "password_input",
             "onChangeText": [Function],
             "placeholder": "password",
             "style": Object {
@@ -349,7 +338,6 @@ ShallowWrapper {
             "buttonType": "primary",
             "children": "Log In",
             "disabled": true,
-            "id": "login_button",
             "onPress": [Function],
           },
           "ref": null,
@@ -378,6 +366,7 @@ ShallowWrapper {
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                id="loading_modal_text"
                 style={
                   Object {
                     "backgroundColor": "rebeccapurple",
@@ -392,7 +381,6 @@ ShallowWrapper {
               </Text>
             </View>,
             "hardwareAccelerated": false,
-            "id": "loading_modal",
             "onRequestClose": [Function],
             "visible": false,
           },
@@ -406,6 +394,7 @@ ShallowWrapper {
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                id="loading_modal_text"
                 style={
                   Object {
                     "backgroundColor": "rebeccapurple",
@@ -437,6 +426,7 @@ ShallowWrapper {
                 "allowFontScaling": true,
                 "children": "I'm Loading, yo",
                 "ellipsizeMode": "tail",
+                "id": "loading_modal_text",
                 "style": Object {
                   "backgroundColor": "rebeccapurple",
                   "color": "white",
@@ -480,7 +470,6 @@ ShallowWrapper {
             allowFontScaling={true}
             autoCapitalize="none"
             autoCorrect={false}
-            id="account_slug_input"
             onChangeText={[Function]}
             placeholder="account slug"
             style={
@@ -499,7 +488,6 @@ ShallowWrapper {
             allowFontScaling={true}
             autoCapitalize="none"
             autoCorrect={false}
-            id="username_input"
             onChangeText={[Function]}
             placeholder="user name"
             style={
@@ -518,7 +506,6 @@ ShallowWrapper {
             allowFontScaling={true}
             autoCapitalize="none"
             autoCorrect={false}
-            id="password_input"
             onChangeText={[Function]}
             placeholder="password"
             style={
@@ -537,14 +524,12 @@ ShallowWrapper {
             accessibilityLabel="Login Button"
             buttonType="primary"
             disabled={true}
-            id="login_button"
             onPress={[Function]}
           >
             Log In
           </Button>
           <Component
             hardwareAccelerated={false}
-            id="loading_modal"
             onRequestClose={[Function]}
             visible={false}
           >
@@ -564,6 +549,7 @@ ShallowWrapper {
                 accessible={true}
                 allowFontScaling={true}
                 ellipsizeMode="tail"
+                id="loading_modal_text"
                 style={
                   Object {
                     "backgroundColor": "rebeccapurple",
@@ -597,7 +583,6 @@ ShallowWrapper {
               allowFontScaling={true}
               autoCapitalize="none"
               autoCorrect={false}
-              id="account_slug_input"
               onChangeText={[Function]}
               placeholder="account slug"
               style={
@@ -616,7 +601,6 @@ ShallowWrapper {
               allowFontScaling={true}
               autoCapitalize="none"
               autoCorrect={false}
-              id="username_input"
               onChangeText={[Function]}
               placeholder="user name"
               style={
@@ -635,7 +619,6 @@ ShallowWrapper {
               allowFontScaling={true}
               autoCapitalize="none"
               autoCorrect={false}
-              id="password_input"
               onChangeText={[Function]}
               placeholder="password"
               style={
@@ -654,7 +637,6 @@ ShallowWrapper {
               accessibilityLabel="Login Button"
               buttonType="primary"
               disabled={true}
-              id="login_button"
               onPress={[Function]}
             >
               Log In
@@ -662,7 +644,6 @@ ShallowWrapper {
             undefined,
             <Component
               hardwareAccelerated={false}
-              id="loading_modal"
               onRequestClose={[Function]}
               visible={false}
             >
@@ -682,6 +663,7 @@ ShallowWrapper {
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
+                  id="loading_modal_text"
                   style={
                     Object {
                       "backgroundColor": "rebeccapurple",
@@ -716,7 +698,6 @@ ShallowWrapper {
               "allowFontScaling": true,
               "autoCapitalize": "none",
               "autoCorrect": false,
-              "id": "account_slug_input",
               "onChangeText": [Function],
               "placeholder": "account slug",
               "style": Object {
@@ -741,7 +722,6 @@ ShallowWrapper {
               "allowFontScaling": true,
               "autoCapitalize": "none",
               "autoCorrect": false,
-              "id": "username_input",
               "onChangeText": [Function],
               "placeholder": "user name",
               "style": Object {
@@ -766,7 +746,6 @@ ShallowWrapper {
               "allowFontScaling": true,
               "autoCapitalize": "none",
               "autoCorrect": false,
-              "id": "password_input",
               "onChangeText": [Function],
               "placeholder": "password",
               "style": Object {
@@ -792,7 +771,6 @@ ShallowWrapper {
               "buttonType": "primary",
               "children": "Log In",
               "disabled": true,
-              "id": "login_button",
               "onPress": [Function],
             },
             "ref": null,
@@ -821,6 +799,7 @@ ShallowWrapper {
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
+                  id="loading_modal_text"
                   style={
                     Object {
                       "backgroundColor": "rebeccapurple",
@@ -835,7 +814,6 @@ ShallowWrapper {
                 </Text>
               </View>,
               "hardwareAccelerated": false,
-              "id": "loading_modal",
               "onRequestClose": [Function],
               "visible": false,
             },
@@ -849,6 +827,7 @@ ShallowWrapper {
                   accessible={true}
                   allowFontScaling={true}
                   ellipsizeMode="tail"
+                  id="loading_modal_text"
                   style={
                     Object {
                       "backgroundColor": "rebeccapurple",
@@ -880,6 +859,7 @@ ShallowWrapper {
                   "allowFontScaling": true,
                   "children": "I'm Loading, yo",
                   "ellipsizeMode": "tail",
+                  "id": "loading_modal_text",
                   "style": Object {
                     "backgroundColor": "rebeccapurple",
                     "color": "white",

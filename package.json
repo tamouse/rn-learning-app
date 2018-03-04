@@ -15,7 +15,6 @@
     "jest-react-native": "^18.0.0",
     "prettier": "^1.10.2",
     "react-dom": "^16.2.0",
-    "react-native-mock": "gabrielrotbart/react-native-mock#update_to_support_react_16",
     "react-test-renderer": "16.2.0"
   },
   "scripts": {

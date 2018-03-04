@@ -41,6 +41,7 @@ ShallowWrapper {
           accessibilityLabel="logout button"
           buttonType="primary"
           disabled={false}
+          id="logout_button"
           onPress={[MockFunction]}
         >
           Confirm Log Out
@@ -81,6 +82,7 @@ ShallowWrapper {
           "buttonType": "primary",
           "children": "Confirm Log Out",
           "disabled": false,
+          "id": "logout_button",
           "onPress": [MockFunction],
         },
         "ref": null,
@@ -113,6 +115,7 @@ ShallowWrapper {
             accessibilityLabel="logout button"
             buttonType="primary"
             disabled={false}
+            id="logout_button"
             onPress={[MockFunction]}
           >
             Confirm Log Out
@@ -153,6 +156,7 @@ ShallowWrapper {
             "buttonType": "primary",
             "children": "Confirm Log Out",
             "disabled": false,
+            "id": "logout_button",
             "onPress": [MockFunction],
           },
           "ref": null,

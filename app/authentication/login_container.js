@@ -26,8 +26,8 @@ export class LoginContainer extends React.Component {
         }
       })
       .then(user => {
-        const account = at(user, ['account.subdomain'])
-        const token = at(user, ['api_token'])
+        const account = at(user, ["account.subdomain"])
+        const token = at(user, ["api_token"])
         if (account && token) {
           setCredentials(account, token)
             .then(() => {
