@@ -1,10 +1,16 @@
 import React from "react"
 import { Button, Text, View } from "react-native"
 import styles from "../../styles"
+import { HamburgerMenu } from "../stack_header/hamburger_menu";
 
 export default class AltHomeScreen extends React.Component {
+  static navigationOptions = {
+    headerLeft: HamburgerMenu
+  }
+
   gotoAltAlt = () => this.props.navigation.navigate("AltAlt")
   gotoGeneric = () => this.props.navigation.navigate("Generic")
+
   render() {
     return (
       <View style={styles.screen}>

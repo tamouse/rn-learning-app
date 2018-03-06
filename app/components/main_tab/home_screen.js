@@ -1,21 +1,11 @@
 import React from "react"
-// import T from "prop-types"
 import { Button, Text, View } from "react-native"
 import styles from "../../styles"
 import { getCredentials } from "../../authentication/actions"
-import { DefaultRightHeader, DefaultLeftHeader } from "./defaultSides"
-import { HamburgerMenu } from "../corner_menus/hamburger_menu"
+import { HamburgerMenu } from "../stack_header/hamburger_menu"
 
 export default class MainHomeScreen extends React.Component {
-  // static propTypes = {}
 
-  // This means of getting the title to be centered isn't really tenable.
-  // I have to put something like this in *every* component of the stack,
-  // omitting the left side for screens on the stack beyond the first.
-  // static navigationOptions = {
-  //   headerLeft: <Text>*</Text>,
-  //   headerRight: <Text>*</Text>
-  // }
   static navigationOptions = {
     headerLeft: HamburgerMenu
   }

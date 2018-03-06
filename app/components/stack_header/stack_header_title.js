@@ -1,19 +1,7 @@
 import React from "react"
 import { Text, View, StyleSheet } from "react-native"
 
-/**
- * Replace the Main StackNavigator Header with my own component.
- *
- * Given the the `header` option:
- *
- * > React Element or a function that given HeaderProps returns a React Element, to display as a header. Setting to null hides header.
- *
- * I think this means it needs to be a function?
- *
- * This attempt didn't work, either :(
- */
-
-export const MainStackHeader = props => {
+export const StackHeaderTitle = props => {
   return (
     <View style={styles.outer}>
       <View style={styles.inner}>
@@ -23,7 +11,7 @@ export const MainStackHeader = props => {
   )
 }
 
-export default MainStackHeader
+export default StackHeaderTitle
 
 const styles = StyleSheet.create({
   outer: {
@@ -31,7 +19,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "red"  // NOTE: to make it obvious where this is
   },
   inner: {
     flex: 1,
