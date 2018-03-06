@@ -214,3 +214,32 @@ The [RN Docs] talk about it [here](https://facebook.github.io/react-native/docs/
 Oh, I had hopes.
 
 How do people learn this on their own? I guess I will stick with whatever OJT I can still get.
+
+
+## 0014/stack-header-again
+
+Can't say how many combinations of this I've tried.
+
+
+
+Installed `react-native-vector-icons` to give some nice icons, but had to also follow some guidance from https://github.com/oblador/react-native-vector-icons/issues/593#issuecomment-361242379 :
+
+> yanglingang commented on Jan 29
+> react-native-vector-icons need linked by react-native.
+> do not use the expo, because expo will be disabled the react-native link. i use the react-native link in expo environment then get some error.
+> my way is:
+> 1. use react-native init project_name to renew the project.
+> 2. yarn add react-native-elements react-native-vector-icons
+> 3. react-native link react-native-vector-icons
+> 4. add "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json", to package.json scripts part, run yarn install this command will be executed
+> the step 4 for resolve error: bundling failed: Error: While resolving module react-native-vector-icons/FontAwesome, the Haste package react-native-vector-icons was found. However the module FontAwesome could not be found within the package. Indeed, none of these files exist
+
+From where I was in the project, all I did was add step 4 to `package.json`.
+
+Can keep stack title centered with both sides defined
+
+- put a defaultRight in the root StackNav structure's navigationOptions
+- put a hamburger menu in the defaultLeft for the first screen on each stack
+- omit defining defaultLeft for all other screens.
+
+I think this will work!

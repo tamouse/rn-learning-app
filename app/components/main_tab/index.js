@@ -5,7 +5,7 @@ import ModalView from "./modal_view"
 import Generic from "../../components/generic_component"
 import MainStackHeader from "./main_stack_header"
 // import Header from "./StackNavigatorHeader"
-// import { DefaultLeftHeader, DefaultRightHeader } from "./defaultSides"
+import { DefaultLeftHeader, DefaultRightHeader } from "./defaultSides"
 
 
 export default (MainStack = StackNavigator(
@@ -30,7 +30,7 @@ export default (MainStack = StackNavigator(
       title: "main",
       // NOTE: The following doesn't work: these fill in all the screens of the stack :(
       // headerLeft: DefaultLeftHeader,
-      // headerRight: DefaultRightHeader
+      headerRight: DefaultRightHeader
       // NOTE: Copied the original Header from ReactNavigator, see if I can override; except it relies on a lot of other stuff :(
       // header: Header
       // headerStyle: {

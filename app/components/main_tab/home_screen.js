@@ -4,6 +4,7 @@ import { Button, Text, View } from "react-native"
 import styles from "../../styles"
 import { getCredentials } from "../../authentication/actions"
 import { DefaultRightHeader, DefaultLeftHeader } from "./defaultSides"
+import { HamburgerMenu } from "../corner_menus/hamburger_menu"
 
 export default class MainHomeScreen extends React.Component {
   // static propTypes = {}
@@ -16,8 +17,7 @@ export default class MainHomeScreen extends React.Component {
   //   headerRight: <Text>*</Text>
   // }
   static navigationOptions = {
-    headerLeft: DefaultLeftHeader,
-    headerRight: DefaultRightHeader
+    headerLeft: HamburgerMenu
   }
 
   state = {
