@@ -4,6 +4,7 @@
   "private": true,
   "devDependencies": {
     "babel-eslint": "^8.2.2",
+    "babel-preset-react-native": "^4.0.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -24,7 +25,8 @@
     "test": "eslint 'app/**' && jest",
     "jest": "jest",
     "lint": "eslint 'app/**' --fix",
-    "format": "prettier 'app/**/*.js' --write"
+    "format": "prettier 'app/**/*.js' --write",
+    "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
   },
   "jest": {
     "verbose": true,
@@ -58,6 +60,7 @@
     "react-native-config": "^0.11.5",
     "react-native-keychain": "^3.0.0-rc.3",
     "react-native-sensitive-info": "^5.1.0",
+    "react-native-vector-icons": "^4.5.0",
     "react-navigation": "^1.0.3"
   }
 }

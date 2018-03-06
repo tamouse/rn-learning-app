@@ -1,11 +1,14 @@
 import React from "react"
-import T from "prop-types"
 import { Button, Text, View } from "react-native"
 import styles from "../../styles"
 import { getCredentials } from "../../authentication/actions"
+import { HamburgerMenu } from "../stack_header/hamburger_menu"
 
 export default class MainHomeScreen extends React.Component {
-  static propTypes = {}
+
+  static navigationOptions = {
+    headerLeft: HamburgerMenu
+  }
 
   state = {
     account_slug: "Unknown!"
