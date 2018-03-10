@@ -5,7 +5,6 @@ import { getCredentials } from "../../authentication/actions"
 import { HamburgerMenu } from "../stack_header/hamburger_menu"
 
 export default class MainHomeScreen extends React.Component {
-
   static navigationOptions = {
     headerLeft: HamburgerMenu
   }

@@ -4,7 +4,7 @@ import MainAltScreen from "./alt_screen"
 import ModalView from "./modal_view"
 import Generic from "../../components/generic_component"
 import { StackHeaderTitle } from "../stack_header/stack_header_title"
-import { EmptyMenu } from "../stack_header/empty_menu";
+import { EmptyMenu } from "../stack_header/empty_menu"
 
 export default (MainStack = StackNavigator(
   {
@@ -21,4 +21,3 @@ export default (MainStack = StackNavigator(
     }
   }
 ))
-
